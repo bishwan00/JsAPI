@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+header {
+  text-align: center;
+  font-size: larger;
+}
+.wrapper,
+.single-card {
+  height: 450px;
+  max-width: 300px;
+  margin: 1%;
+  position: relative;
+}
+.btn {
+  text-align: center;
+}
+.wrapper {
+  margin-top: 10%;
+  padding: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #f3f0f0;
+  border-radius: 25px;
+}
+.wrapper {
+  perspective: 900px;
+}
+
+.single-card {
+  text-align: center;
+  transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+  transform-style: preserve-3d;
+}
+.wrapper:hover .single-card {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.front {
+  cursor: pointer;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50px;
+}
+.back {
+  transform: rotateY(180deg);
+  position: absolute;
+  border-radius: 50px;
+  height: 450px;
+  background: #fff;
+  border: 1px solid hsla(270, 100%, 50%, 1);
+  width: 100%;
+}
+.content {
+  margin-top: 25%;
+}
+
+.content h2 {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 300;
+}
+.content h4 {
+  margin: 0;
+  color: hsla(270, 100%, 50%, 1) !important;
+}
+.content p {
+  margin-top: 10%;
+}
+
+.socials {
+  margin-top: 20%;
+}
+
+.btnn {
+  margin: 35px 35px 80px !important;
+  text-decoration: none !important;
+  padding: 10px 35px !important;
+  color: white !important;
+  border-radius: 200px !important;
+  font-weight: 300 !important;
+  text-align: center !important;
+}
+
+.btn-diactive {
+  background-color: hsla(270, 100%, 50%, 1) !important;
+  background-image: radial-gradient(
+      at 46% 70%,
+      hsla(269, 100%, 36%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 60% 89%, hsla(260, 100%, 33%, 1) 0px, transparent 50%),
+    radial-gradient(at 78% 70%, hsla(279, 100%, 31%, 1) 0px, transparent 50%),
+    radial-gradient(at 77% 69%, hsla(191, 73%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 57%, hsla(243, 70%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 29% 54%, hsla(211, 88%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 67% 52%, hsla(259, 98%, 60%, 1) 0px, transparent 50%) !important;
+
+  border: 1px rgb(0, 47, 147) solid !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.btn-diactive:hover {
+  background-color: rgb(0, 27, 180) !important;
+  color: white !important;
+  transform: translateY(-0.4rem) !important;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%) !important;
+}
+
+.btn-diactive:active {
+  transform: translateY(-0.1rem) !important;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%) !important;
+}
+@media (max-width: 643px) {
+  .wrapper {
+    margin-top: 10%;
+  }
+}
